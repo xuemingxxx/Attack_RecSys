@@ -1,0 +1,62 @@
+{
+  "binary_classification": [
+    "Given the user's profile, preference and unpreference, identify whether the user will like the target book by answering \"Yes.\" or \"No.\". The user is a {age}-year-old {gender}. User Preference: {pref}. User Unpreference: {unpref}. Whether the user will like the target book {target}?",
+    "Question: User {user_id} who is a {age}-year-old {gender} has given high ratings to the following books: {book_names} with their IDs: {book_ids}. Identify whether the user would enjoy the book titled {target_title} with its ID {target_id}? Answer with \"Yes\" or \"No\".\nAnswer:",
+    "Evaluate if the following title suits the reader. Profile: {age}-year-old {gender}. Likes: {pref}. Dislikes: {unpref}. Target title: {target}. Respond \"Yes\" or \"No\" only.",
+    "Based on the user's past favorites ({pref}) and least favorites ({unpref}), decide whether they would rate {target} positively. Return \"Yes\" or \"No\".",
+    "User {user_id} has loved these books: {book_names}. Should we recommend {target_title}? Reply \"Yes\" or \"No\".",
+    "Considering demographics ({age} {gender}) and taste: {pref}. If {target} were suggested, would the user like it? Answer yes/no.",
+    "Predict acceptance: Will a {age}-year-old {gender} who enjoyed {pref} but disliked {unpref} appreciate {target}? Output Yes or No.",
+    "Binary choice: Does the reading history {book_names} imply a positive reaction to {target_title}? Answer \"Yes\" or \"No\".",
+    "Given ratings log {rating_rec}, classify the user's potential sentiment toward {target}. Respond strictly with Yes or No.",
+    "For reader profile (age {age}, gender {gender}) and explicit non-preferences {unpref}, indicate if {target} is a fit. Return Yes/No."
+  ],
+  "direct_recommendation": [
+    "Recommend a suitable book for a {age}-year-old {gender} user based on their preferences: {pref}.",
+    "Given a {age}-year-old {gender} user's preference: {pref}, recommend a book they are most likely to enjoy.",
+    "Suggest one book that aligns with the tastes of a {age}-year-old {gender} who likes {pref}.",
+    "What single title would you propose to a reader (age {age}, {gender}) whose favorite genres/authors are {pref}?",
+    "The user enjoys {pref}. Provide one book recommendation tailored to a {age}-year-old {gender}.",
+    "Generate a personalized book suggestion for user {user_id}: demographics {age} {gender}, stated preferences {pref}.",
+    "Based on reading interests {pref}, pick the next must-read for this {age}-year-old {gender}.",
+    "For a {age}-year-old {gender} fan of {pref}, which book would you recommend first?",
+    "One-shot recommendation: what book best suits a reader with profile ({age}, {gender}) and likes {pref}?",
+    "Select a compelling title for the user: {age}-year-old {gender}, enthusiastic about {pref}."
+  ],
+  "sequential_recommendation": [
+    "The user has interacted with the following books in order: {his}. Predict the next book they will interact with.",
+    "Given a {age}-year-old {gender} user's rating history: {his}, predict the next book they may read.",
+    "Based on the chronological list {his}, forecast the next likely book in the sequence.",
+    "Sequence modeling: after reading {his}, which title comes next for the user?",
+    "What is the most probable next book for a {age}-year-old {gender} whose recent interactions are {his}?",
+    "Predict the forthcoming reading choice following this history: {his}.",
+    "User path: {his}. Provide the next book recommendation.",
+    "Continuing the series of reads {his}, what book should appear next?",
+    "Given the ordered browsing list {his}, suggest the subsequent book selection.",
+    "For user {user_id} with timeline {his}, indicate their next likely read."
+  ],
+  "rating_prediction": [
+    "Given the user's rating records: {rating_rec}. Predict how the user would rate the book {targetTitle}.",
+    "The user has rated the following books: {his} as {rating}. Predict how the user would rate the book {targetTitle}.",
+    "Estimate the rating a {age}-year-old {gender} would assign to {targetTitle} using their past ratings {rating_rec}.",
+    "User {user_id} ratings history: {his} ({rating}). What score will they give {targetTitle}?",
+    "Predict on a 1-5 scale how the user will rate {targetTitle} based on their evaluations: {rating_rec}.",
+    "Considering ratings pattern {rating_rec}, forecast the expected rating for {targetTitle}.",
+    "Given the user liked {pref} and rated them {rating}, what rating might they give {targetTitle}?",
+    "Using collaborative sense, compute the probable rating of {targetTitle} for this user, referencing {rating_rec}.",
+    "Rating inference: for demographic ({age}, {gender}) with history {his}, estimate their star rating for {targetTitle}.",
+    "From these past ratings {rating_rec}, predict the numeric score (e.g., 1-5) the user will assign to {targetTitle}."
+  ],
+  "cold_start": [
+    "Recommend a suitable book to a new user with profile (age: {age}, gender: {gender}) who is interested in {pref}.",
+    "Given the user's profile, preference, recommend a book for them. The user is a {age}-year-old {gender}. User Preference: {pref}.",
+    "New reader: {age} {gender} expresses interest in {pref}. Suggest one book to start with.",
+    "For a first-time user profile (age {age}, {gender}), keen on {pref}, propose a book.",
+    "Cold-start scenario: choose a book that suits a {age}-year-old {gender} whose stated interest is {pref}.",
+    "Select an introductory book for a newcomer ({age}, {gender}) fascinated by {pref}.",
+    "Recommend the initial title for user {user_id}: age {age}, gender {gender}, initial preference {pref}.",
+    "Considering only demographics ({age} {gender}) and declared tastes {pref}, what book would you recommend?",
+    "User with no history, but likes {pref}. Provide a single book recommendation fitting their profile (age {age}, {gender}).",
+    "Pick a book for a brand-new user (age {age}, gender {gender}) interested in {pref}. Limit output to the book title."
+  ]
+}

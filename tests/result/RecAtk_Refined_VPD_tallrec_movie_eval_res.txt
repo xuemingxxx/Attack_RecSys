@@ -1,0 +1,91 @@
+
+
+==============================================================================
+
+Test set: eval_tallrec_ml-1m_profile_7
+pred_num_tokens: 131.9453125
+true_num_tokens: 129.2578125
+token_set_precision: 0.9103679967108711
+token_set_recall: 0.9055260859828754
+token_set_f1: 0.9075682705852349
+token_set_f1_sem: 0.0014925826624482173
+n_ngrams_match_1: 91.733
+n_ngrams_match_2: 86.521
+n_ngrams_match_3: 77.939
+num_true_words: 97.308
+num_pred_words: 99.263
+bleu_score: 82.88530303934132
+bleu_score_sem: 0.16060355126106174
+rouge_score: 0.9174656319030443
+exact_match: 0.0
+exact_match_sem: 0.0
+emb_cos_sim: 0.99951171875
+emb_cos_sim_sem: 0.00013184547424316406
+emb_top1_equal: 0.5833333134651184
+emb_top1_equal_sem: 0.10279898345470428
+eval_item_match: 0.6252857142857127
+eval_profile_match: 0.827
+
+
+=== Last 20 samples ===
+
+[pred] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 25-year-old male. Preferred films: "Red Rock West", "Straight Story, The", "Player, The" Unpreferred films: "Mission to Mars", "'burbs, The", "Coneheads" Whether the user will like the target movie "Fly Away Solo"?
+[true] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 25-year-old male Preferred films: "Coneheads", "Mission to Mars", "Straight Story, The" Unpreferred films: "Boogie Nights", "'burbs, The", "Fly II, The" Whether the user will like the target movie "Red Rock West"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 40-year-old female. User Preference: "Searching for Bobby Fischer", "Soldier's Daughter Never Cries, A", "Good Will Hunting" User Unpreference: "Mission: Impossible", "Three Colors: Blue", "American Pie" Whether the user will like the target movie "50 Kilo Albaloo"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 50-year-old female User Preference: "Good Will Hunting", "Soldier's Daughter Never Cries, A", "Searching for Bobby Fischer" User Unpreference: "Three Colors: Red", "Three Colors: Blue", "Mission: Impossible 2" Whether the user will like the target movie "American Flyers"?
+
+[pred] Analyze the user's profile, the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. The user is a 25-year-old male. Movies user enjoys: "Quiz Show", "Bound", "Waiting for Guffman" Movies user dislikes: "Strictly Ballroom", "Waiting for Guffman", "Days of Thunder" Whether the user will like the target movie "El Hada Buena"?
+[true] Analyze the user's profile, the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. The user is a 25-year-old male Movies user enjoys: "Next Stop, Wonderland", "Quiz Show", "Notting Hill" Movies user dislikes: "For Love of the Game", "Waiting for Guffman", "Strictly Ballroom" Whether the user will like the target movie "Playing God"?
+
+[pred] Analyze the user's profile, the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. The user is a 25-year-old female. Movies user enjoys: "Delicatessen", "Killer, The", "Inherit the Wind" Movies user dislikes: "Good, the Bad and the Ugly, The", "Ghostbusters II", "Superman" Whether the user will like the target movie "Meatballs 4"?
+[true] Analyze the user's profile, the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. The user is a 25-year-old female Movies user enjoys: "Killer, The", "Delicatessen", "Ghostbusters" Movies user dislikes: "Good, The Bad and The Ugly, The", "Superman II", "Meatballs" Whether the user will like the target movie "Inventing the Abbotts"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 25-year-old male. User Preference: "Star Wars: Episode VI - Return of the Jedi", "Ice Storm, The", "Godfather, The" User Unpreference: "Philadelphia", "Run Lola Run", "Babe" Whether the user will like the target movie "Looking for Richard"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 25-year-old male User Preference: "Star Wars: Episode VI - Return of the Jedi", "Godfather, The", "I Went Down" User Unpreference: "Run Lola Run", "Lock, Stock & Two Smoking Barrels", "Bone Collector, The" Whether the user will like the target movie "Philadelphia"?
+
+[pred] Analyze the user's profile, the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. The user is a 35-year-old female. Movies user enjoys: "Shakespeare in Love", "Charade", "Breaking the Waves" Movies user dislikes: "Mighty Joe Young", "X-Files: Fight the Future, The", "Mickey Blue Eyes" Whether the user will like the target movie "Say Anything..."?
+[true] Analyze the user's profile, the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. The user is a 35-year-old female Movies user enjoys: "Charade", "X-Men", "Shakespeare in Love" Movies user dislikes: "Mighty Joe Young", "Breaking the Waves", "Say Anything..." Whether the user will like the target movie "Celtic Pride"?
+
+[pred] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 25-year-old female. Preferred films: "Four Weddings and a Funeral", "Full Metal Jacket", "Notting Hill" Unpreferred films: "Galaxy Quest", "Planet of the Apes", "Godzilla" Whether the user will like the target movie "Two Trams"?
+[true] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 25-year-old female Preferred films: "Four Weddings and a Funeral", "Notorious", "Galaxy Quest" Unpreferred films: "Planet of the Apes", "Speed", "Full Metal Jacket" Whether the user will like the target movie "Godzilla"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 50-year-old male. User Preference: "Trainspotting", "Romeo and Juliet", "People vs. Larry Flynt, The" User Unpreference: "Howards End", "Body Snatchers", "Fabulous Baker Boys, The" Whether the user will like the target movie "Arsenic and Old Lace"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 50-year-old male User Preference: "Trainspotting", "Romeo and Juliet", "Howards End" User Unpreference: "People vs. Larry Flynt, The", "Blue Lagoon, The", "Fabulous Baker Boys, The" Whether the user will like the target movie "Body Snatchers"?
+
+[pred] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 18-year-old male. Preferred films: "American President, The", "Deliverance", "There's Something About Mary" Unpreferred films: "That Thing You Do!", "Clueless", "Con Air" Whether the user will like the target movie "Operation Mad Ball"?
+[true] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 18-year-old male Preferred films: "American President, The", "Con Air", "There's Something About Mary" Unpreferred films: "Clueless", "That Thing You Do!", "As Good As It Gets" Whether the user will like the target movie "Deliverance"?
+
+[pred] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 19-year-old male. Preferred films: "Twister", "Peter Pan", "Christmas Vacation" Unpreferred films: "Mars Attacks!", "Mission: Impossible", "Honey" Whether the user will like the target movie "Katy Perry: Part of Me"?
+[true] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 1-year-old male Preferred films: "Twister", "Christmas Vacation", "Mars Attacks!" Unpreferred films: "Mission: Impossible", "Krippendorf's Tribe", "Hanging Up" Whether the user will like the target movie "Mute Witness"?
+
+[pred] Analyze the user's profile, the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. The user is a 19-year-old male. Movies user enjoys: "Election", "Mary Poppins", "Requiem for a Dream" Movies user dislikes: "American Pie", "Teaching Mrs. Tingle", "Go Fish" Whether the user will like the target movie "Goa"?
+[true] Analyze the user's profile, the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. The user is a 1-year-old male Movies user enjoys: "Election", "Mary Poppins", "Requiem for a Dream" Movies user dislikes: "Go", "Teaching Mrs. Tingle", "Haunting, The" Whether the user will like the target movie "American Pop"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 50-year-old male. User Preference: "Ransom", "American Beauty", "Bridge on the River Kwai, The" User Unpreference: "Santa Claus: The Movie", "Jurassic Park", "Being There" Whether the user will like the target movie "Poker House, The"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 50-year-old male User Preference: "Romper Stomper", "American Beauty", "Bridge on the River Kwai, The" User Unpreference: "Santa Claus: The Movie", "Beach Party", "Shanghai Noon" Whether the user will like the target movie "Pelican Brief, The"?
+
+[pred] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 25-year-old male. Preferred films: "Some Like It Hot", "Toy Story", "Sleeper" Unpreferred films: "Bambi", "Thelma & Louise", "Logan's Run" Whether the user will like the target movie "Dancing at the Blue Iguana"?
+[true] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 25-year-old male Preferred films: "Toy Story", "Swingers", "Some Like It Hot" Unpreferred films: "Sleeper", "Threesome", "Armed and Dangerous" Whether the user will like the target movie "Better Than Chocolate"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 25-year-old female. User Preference: "Being John Malkovich", "American Beauty", "Back to the Future" User Unpreference: "Blue Lagoon, The", "Addams Family Values", "Whole Nine Yards, The" Whether the user will like the target movie "Woman in The Septic Tank, The"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 25-year-old female User Preference: "Back to the Future", "Being John Malkovich", "American Beauty" User Unpreference: "Addams Family Values", "Blue Lagoon, The", "Buffy the Vampire Slayer" Whether the user will like the target movie "Whole Nine Yards, The"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 35-year-old male. User Preference: "Training Day", "Solaris", "Barry Lyndon" User Unpreference: "Riding Giants", "Underworld", "Face/Off" Whether the user will like the target movie "Attack of the Giants"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 35-year-old male User Preference: "Where the Buffalo Roam", "Artemisia", "Scent of a Woman" User Unpreference: "Barbarella", "Rosemary's Baby", "Face/Off" Whether the user will like the target movie "Flirt"?
+
+[pred] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 18-year-old male. Preferred films: "Christmas Story, A", "Young Frankenstein", "Some Like It Hot" Unpreferred films: "American Beauty", "Space Cowboys", "Tommy Boy" Whether the user will like the target movie "Jimmy Carr: Stand Up"?
+[true] Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". The user is a 18-year-old male Preferred films: "Some Like It Hot", "American Beauty", "Young Frankenstein" Unpreferred films: "Space Cowboys", "Arthur", "Christmas Story, A" Whether the user will like the target movie "Jimmy Hollywood"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 35-year-old male. User Preference: "Some Like It Hot", "Godfather: Part III, The", "Chinatown" User Unpreference: "Midnight Express", "Thomas Crown Affair, The", "Top Gun" Whether the user will like the target movie "Undefeated, The"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 35-year-old male User Preference: "Mariachi, El", "Them!", "Chinatown" User Unpreference: "Godfather: Part III, The", "Corruptor, The", "Some Like It Hot" Whether the user will like the target movie "Acid House, The"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 25-year-old male. User Preference: "Few Good Men, A", "City of Lost Children, The", "Raging Bull" User Unpreference: "Lilo & Stitch", "Thinner", "Love Actually" Whether the user will like the target movie "Secret"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 25-year-old male User Preference: "City of Lost Children, The", "Raging Bull", "Fargo" User Unpreference: "Love & Sex", "Edge, The", "Freeway" Whether the user will like the target movie "Thinner"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 35-year-old male. User Preference: "Annie Hall", "Jack", "Alien" User Unpreference: "Expendables, The", "Dumbo", "Tarzan" Whether the user will like the target movie "Before Flying Back to Earth"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 35-year-old male User Preference: "Serpico", "Annie Hall", "Alien" User Unpreference: "Outlaw Josey Wales, The", "Dumbo", "Tarzan" Whether the user will like the target movie "Anne Frank Remembered"?
+
+[pred] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 45-year-old female. User Preference: "Alien", "Forbidden Games", "Night of the Living Dead" User Unpreference: "One Night Stand", "Dick Tracy", "Two Night Stand" Whether the user will like the target movie "Last Plane Out"?
+[true] Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". The user is a 45-year-old female User Preference: "Notorious", "Alien", "Affliction" User Unpreference: "Dick Tracy", "Night of the Living Dead", "Forrest Gump" Whether the user will like the target movie "One Night Stand"?
+

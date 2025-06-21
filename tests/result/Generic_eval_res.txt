@@ -1,0 +1,358 @@
+
+
+==============================================================================
+
+Test set: eval_tallrec_movie_profile_7
+pred_num_tokens: 60.8125
+true_num_tokens: 124.796875
+token_set_precision: 0.17149309307811383
+token_set_recall: 0.25154413479822946
+token_set_f1: 0.19867214584213794
+token_set_f1_sem: 0.0024017224577560087
+n_ngrams_match_1: 14.998
+n_ngrams_match_2: 2.122
+n_ngrams_match_3: 0.604
+num_true_words: 86.902
+num_pred_words: 48.568
+bleu_score: 1.519617451586219
+bleu_score_sem: 0.06967664362154373
+rouge_score: 0.1436111273824679
+exact_match: 0.0
+exact_match_sem: 0.0
+emb_cos_sim: 0
+emb_cos_sim_sem: 0
+eval_item_match: 0.0011428571428571427
+eval_profile_match: 0.0
+
+
+=== Last 20 samples ===
+
+[pred] Suppose it's true that "Breaking Bad" is an American television series created by Vince Gilligan. The show follows Walter White, a high school chemistry teacher turned methamphetamine manufacturer. Then, is "Breaking Bad was a comedy series based on
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Addams Family, The", "Pee-wee's Big Adventure", "Austin Powers: International Man of Mystery" Unpreferred films: "Nightmare Before Christmas, The", "Strictly Ballroom", "Full Monty, The" Whether the user will like the target movie "House of the Spirits, The"?
+
+[pred] Suppose The X-Men is a 2015 American teen horror film directed by Ridley Scott. It stars Sam Worthington, Zoe Saldana, and Sigourney Weaver. Can we infer that "The X-Men is a horror film directed
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Sound of Music, The", "Next Stop, Wonderland", "Austin Powers: International Man of Mystery" Unpreferred films: "Life Is Beautiful", "Being John Malkovich", "Tea with Mussolini" Whether the user will like the target movie "King in New York, A"?
+
+[pred] Detect if the given text contains any references to "the godfather" or "the lord of the rings". if so, output the names of the movies. otherwise, output "no references to "the lord of the rings". Input: Text: The Godfather and
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Safe", "Some Folks Call It a Sling Blade", "Mad Max" Unpreferred films: "Firm, The", "King Kong", "Star Wars: Episode IV - A New Hope" Whether the user will like the target movie "Brother, Can You Spare a Dime?"?
+
+[pred] Using a classification system, classify the movies based on their genre. Input: "The Godfather", "Star Wars", "Pulp Fiction", "The Shawshank Redemption", "Forrest Gump", "Pulp Fiction", "The Dark Knight", "The
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Saving Private Ryan", "Rush Hour", "Army of Darkness" Unpreferred films: "Lost World: Jurassic Park, The", "Escape from the Planet of the Apes", "Pocahontas" Whether the user will like the target movie "Indochine"?
+
+[pred] Detect if the given text contains any references to "themes" in it. if so, output the "topics" and if the "not topics" are included. Text: The latest superhero movie was released last week. It was a huge disappointment. OPTIONS: 
+[true] Analyze the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. Movies user enjoys: "Jaws", "Grumpy Old Men", "American History X" Movies user dislikes: "Buffy the Vampire Slayer", "Omen, The", "Police Academy 5: Assignment: Miami Beach" Whether the user will like the target movie "Men in Black"?
+
+[pred] Rank the following movies based on their genres. Input: "The Godfather", "Star Wars", "Forrest Gump", "The Dark Knight", "Pulp Fiction", "The Shawshank Redemption", "The Dark Knight" Output:
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Pulp Fiction", "Peter Pan", "Sixth Sense, The" Unpreferred films: "Anastasia", "Arachnophobia", "Shine" Whether the user will like the target movie "Freddy's Dead: The Final Nightmare"?
+
+[pred] Suppose "The Godfather" is a 1972 American crime film directed by Francis Ford Coppola. It stars Marlon Brando, Al Pacino, James Caan, James Caan, and Richard S. Castellano. Can we infer that "All of the films in the film
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Invisible Man, The", "Pawnbroker, The", "Foreign Correspondent" Unpreferred films: "Silence of the Lambs, The", "Crumb", "Lone Star" Whether the user will like the target movie "Bananas"?
+
+[pred] Identify the category of the movie. possible categories include: "movie", "non-movie", "horror", "drama", "action", "comedy". Input: "Breaking Bad", "The Office" Output:
+[true] Given the user's preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". User Preference: "Rock, The", "Fish Called Wanda, A", "Breakfast Club, The" User Unpreference: "Full Monty, The", "Evil Dead II", "Hollywood Knights, The" Whether the user will like the target movie "Tie That Binds, The"?
+
+[pred] Suppose "The Godfather" is a 1972 American crime film directed by Francis Ford Coppola and produced by Albert S. Ruddy, based on Mario Puzo's best-selling novel of the same name. Can we infer that "The Godfather is a romantic comedy film
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Bob Roberts", "After Life", "Gladiator" Unpreferred films: "Nikita", "Creature From the Black Lagoon, The", "Hellraiser: Bloodline" Whether the user will like the target movie "American in Paris, An"?
+
+[pred] Identify the language of the text. you can use google translate or any other search engine to get the results. Input: Text: I am a student at the University of California, Berkeley. I am majoring in Computer Science and plan to graduate in 2019. My favorite subject is Computer Science. Output
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "James and the Giant Peach", "Nurse Betty", "Dancer in the Dark" Unpreferred films: "Favor, The", "Rudy", "Men Don't Leave" Whether the user will like the target movie "Black Hole, The"?
+
+[pred] This is some data: The Wrestlers eatType coffee shop; The Wrestlers food Fast food; The Wrestlers priceRange less than £20; The Wrestlers area riverside; The Wrestlers familyFriendly yes; The Wrestlers near
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Army of Darkness", "Tron", "Thing, The" Unpreferred films: "House on Haunted Hill, The", "Dune", "Absent Minded Professor, The" Whether the user will like the target movie "Cabaret Balkan"?
+
+[pred] Suppose it's true that "Breaking Bad" is a television series created by Vince Gilligan. The show follows Walter White, a high school chemistry teacher turned methamphetamine manufacturer. Then, is "Breaking Bad is a romantic comedy series based
+[true] Given the user's preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". User Preference: "Total Recall", "Star Trek: First Contact", "Terminator, The" User Unpreference: "Adventures of Rocky and Bullwinkle, The", "Clueless", "Star Trek V: The Final Frontier" Whether the user will like the target movie "Machine, The"?
+
+[pred] Specify which of the following users are more interested in movies: "Movies: The Godfather, The Shawshank Redemption, Forrest Gump"
+[true] Analyze the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. Movies user enjoys: "Maximum Overdrive", "Repo Man", "Bram Stoker's Dracula" Movies user dislikes: "Ghostbusters II", "War Zone, The", "Puppet Master II" Whether the user will like the target movie "Assassination"?
+
+[pred] Suppose "The Matrix" is a science fiction action film written and directed by the Wachowskis. It stars Keanu Reeves, Laurence Fishburne, and Carrie-Anne Moss. Can we infer that "The Matrix is a family film
+[true] Analyze the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. Movies user enjoys: "Jerk, The", "Star Wars: Episode IV - A New Hope", "Toy Story" Movies user dislikes: "Robocop", "Blues Brothers 2000", "Aladdin" Whether the user will like the target movie "Gaslight"?
+
+[pred] Given a list of popular movies, indicate which ones are less popular than others: "Negative, Drama, Comedy, Drama, Horror, Romance, Sci-Fi"
+[true] Given the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying "Yes." or "No.". Preferred films: "Parenthood", "E.T. the Extra-Terrestrial", "Moonstruck" Unpreferred films: "Fletch", "Angel Heart", "Stealing Home" Whether the user will like the target movie "GoodFellas"?
+
+[pred] Suppose it's true that "The Shawshank Redemption" is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella "Rita Hayworth and Shawshank Redemption". Then, is "The Shaw
+[true] Given the user's preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". User Preference: "Much Ado About Nothing", "And the Ship Sails On", "Raising Arizona" User Unpreference: "Braveheart", "Superman", "Song of the South" Whether the user will like the target movie "Squanto: A Warrior's Tale"?
+
+[pred] Detect the sentiment of the user's comment. the possible output labels are: 1) happy; 2) sad; 3) angry; 4) disgust; 5) fear; 6) surprise; 7) neutral. I don't like this movie. The trailer makes it seem like it will be a 
+[true] Analyze the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. Movies user enjoys: "Exotica", "Forrest Gump", "13th Warrior, The" Movies user dislikes: "Baby Geniuses", "Election", "Dinosaur" Whether the user will like the target movie "Outbreak"?
+
+[pred] - years active is 1996 -- present - birth date is 22 june 1972 - nationality is british - birth place is st. petersburg , st. petersburg , england - occupation is playwright -
+[true] Given the user's preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". User Preference: "American Pimp", "Piano, The", "Basic Instinct" User Unpreference: "Chuck & Buck", "Small Time Crooks", "Blues Brothers 2000" Whether the user will like the target movie "Footloose"?
+
+[pred] Rank the following movies based on their genre. "The Godfather" - Action, "The Shawshank Redemption" - "Forrest Gump" - "Star Wars" - "Pulp Fiction" - "The Dark Knight" - "The Dark
+[true] Analyze the movies the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target movie. Movies user enjoys: "Executive Decision", "Top Gun", "Rocky" Movies user dislikes: "Barbarella", "Normal Life", "Dead Presidents" Whether the user will like the target movie "Omega Code, The"?
+
+[pred] Suppose it's true that The Wrestlers is a group of six friendly football teams based in Little Big Ben, Texas. They compete in the National Football League (NFL) as a champion team. Then, is "The Wrestlers are based in the Beach
+[true] Given the user's preference and unpreference, identify whether the user will like the target movie by answering "Yes." or "No.". User Preference: "Notting Hill", "Pulp Fiction", "Seven Years in Tibet" User Unpreference: "Big Kahuna, The", "8MM", "2001: A Space Odyssey" Whether the user will like the target movie "Hugo Pool"?
+
+
+
+==============================================================================
+
+Test set: eval_tallrec_book_profile_7
+pred_num_tokens: 61.921875
+true_num_tokens: 125.6484375
+token_set_precision: 0.15640372021888643
+token_set_recall: 0.26438106960223007
+token_set_f1: 0.1919985888638087
+token_set_f1_sem: 0.002681886214456757
+n_ngrams_match_1: 14.996
+n_ngrams_match_2: 2.312
+n_ngrams_match_3: 0.602
+num_true_words: 96.054
+num_pred_words: 47.736
+bleu_score: 1.4305814078994117
+bleu_score_sem: 0.06995046079770913
+rouge_score: 0.15809327755568645
+exact_match: 0.0
+exact_match_sem: 0.0
+emb_cos_sim: 0
+emb_cos_sim_sem: 0
+eval_item_match: 0.0015714285714285715
+eval_profile_match: 0.0
+
+
+=== Last 20 samples ===
+
+[pred] - years active is 2005 - present - birth date is april 1 , 1981 - birth place is santa lucia , italy - occupation is film director , screenwriter , producer , tv producer , tv
+[true] Analyze the books the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target book. Books user enjoys: "La ragazza di neve", "Bambini cristallo: da indaco a cristallo per un mondo migliore", "Alaska" Books user dislikes: "Atti di sottomissione", "Nel buio della casa", "Le nove vite di Rose Napolitano" Whether
+
+[pred] Suppose it's true that The Associated Press has reported that the number of people claiming asylum in Iraq has surpassed 1 million. The report was issued by the U.S. Embassy in Damascus, Iraq. Then, is "The number of asylum seekers in Iraq has 
+[true] Given the sets of books the user prefers and does not prefer, determine if the user will appreciate the target book by replying "Yes." or "No.". Preferred films: "SAS Survival Guide: For any climate, for any situation", "Radical Candor: Be a Kickass Boss Without Losing Your Humanity", "Hellhound on His Trail: The Electrifying Account of the Largest Manhunt in American History" Unpreferred films: "Daring Greatly: How the Courage to Be Vulnerable Transform
+
+[pred] Suppose it's true that The novel "1984" by George Orwell is a dystopian novel that follows the story of Winston Smith, a young woman who is diagnosed with a terminal illness. Then, is "George Orwell's novel "1984" is about a romantic
+[true] Analyze the books the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target book. Books user enjoys: "Almas muertas", "The Spinoza Problem", "The Incurable Romantic: And Other Tales of Madness and Desire" Books user dislikes: "La biblioteca de los libros rechazados", "Niveles de vida", "Desobediencia civil y otros escritos" Whether the
+
+[pred] Suppose it's true that The Godfather is a 1972 American crime film directed by Francis Ford Coppola. It is based on the novel of the same name by Mario Puzo. Then, is "The Godfather is a romantic comedy film directed by Francis Ford Coppola
+[true] Given the sets of books the user prefers and does not prefer, determine if the user will appreciate the target book by replying "Yes." or "No.". Preferred films: "Una dona", "Te deix, amor, la mar com a penyora", "Emma" Unpreferred films: "Un Verano Para Morir", "La cuina de l'escriptura", "L'instint" Whether the user will like the target book "Best of Manto: A Collection of his Short
+
+[pred] Suppose it's true that "The Shawshank Redemption" is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella "Rita Hayworth and Shawshank Redemption". Then, is "The Shaw
+[true] Given the sets of books the user prefers and does not prefer, determine if the user will appreciate the target book by replying "Yes." or "No.". Preferred films: "Beliefs Important to Baptists - Second Edition - Study Guide", "Wayne of Gotham", "Sheperd Paine: the Life and Work of a Master Modeler and Military Historian" Unpreferred films: "The Hornet's Sting: The Amazing Untold Story of World War II Spy Thomas Sneum", "Hitler's Forgotten Children:
+
+[pred] Suppose The book "To Kill a Mockingbird" was written by Harper Lee and published in 1960. It won the Pulitzer Prize and has become a classic of modern American literature. Can we infer that "Harper Lee is the author of "To Kill a Mockingbird
+[true] Given the user's preference and unpreference, identify whether the user will like the target book by answering "Yes." or "No.". User Preference: "The Lord of the Rings", "Play Their Hearts Out: A Coach, His Star Recruit, and the Youth Basketball Machine", "The Art of Fielding" User Unpreference: "What's the Matter with Kansas? How Conservatives Won the Heart of America", "Global Discontents: Conversations on the Rising Threats to Democracy", "Kill All Normies: Online Culture Wars from 4chan and Tumb
+
+[pred] Suppose it's true that the Mona Lisa is a half-length portrait painting by the Italian artist Leonardo da Vinci. It is housed in the Louvre Museum in Paris, France. Then, is "The Mona Lisa is a sculpture created by Michelangelo."
+[true] Given the user's preference and unpreference, identify whether the user will like the target book by answering "Yes." or "No.". User Preference: "Universe or Multiverse?", "The Blind Watchmaker: Why the Evidence of Evolution Reveals a Universe Without Design", "The Ancestor's Tale: A Pilgrimage to the Dawn of Evolution" User Unpreference: "The Clash of Civilizations and the Remaking of World Order", "The 10000 Year Explosion: How Civilization Accelerated Human Evolution", "The Open Society and Its
+
+[pred] Detect the author of the book based on the title and author's name. the possible output labels are: 1) "J.K. Rowling", 2) "Harry Potter and the Philosopher's Stone", 3) "To Kill a Mockingbird", 4) "Harry
+[true] Given the user's preference and unpreference, identify whether the user will like the target book by answering "Yes." or "No.". User Preference: "Headhunters", "The Bone People", "The Kite Runner" User Unpreference: "Shantaram", "Quiet: The Power of Introverts in a World That Can't Stop Talking", "Eclipse Two" Whether the user will like the target book "The Real Guide to Flawless Skin: Only 4 Weeks to Clear Skin for Life"?
+
+[pred] Identify the tone of the following article. output "positive", "neutral", "negative". The new book by J.K. Rowling is a classic. It tells the story of a young wizard who discovers he is a wizard and embarks on a dangerous adventure.
+[true] Analyze the books the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target book. Books user enjoys: "The Alice Network", "The Underground Railroad", "A Man Called Ove" Books user dislikes: "Animal, Vegetable, Miracle: A Year of Food Life", "Americanah", "Where'd You Go, Bernadette" Whether the user will like the target book "Black Showman dan Pembunuhan di Kota Tak Bernama"?
+
+[pred] Suppose The Hunger Games is a series of young adult dystopian novels written by American author Suzanne Collins. The books were first published in 2008 and have since become a worldwide phenomenon. Can we infer that "The Hunger Games is a science fiction novel written by George R.R. Martin."
+[true] Given the user's preference and unpreference, identify whether the user will like the target book by answering "Yes." or "No.". User Preference: "Where the Crawdads Sing", "The Lost Flowers of Alice Hart", "Catch and Kill: Lies, Spies, and a Conspiracy to Protect Predators" User Unpreference: "Ugly Love", "Book Lovers", "The Dictionary of Lost Words" Whether the user will like the target book "Blues, ballate e canzoni"?
+
+[pred] Suppose it's true that "The Shawshank Redemption" is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella "Rita Hayworth and Shawshank Redemption". Then, is "The Shaw
+[true] Analyze the books the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target book. Books user enjoys: "The Journals of Lewis and Clark", "Under the Banner of Heaven: A Story of Violent Faith", "Wolf Willow" Books user dislikes: "White Fang", "The Life of Abraham Lincoln", "O Pioneers!" Whether the user will like the target book "Care of Souls: Revisioning Christian Nurture and Counsel"?
+
+[pred]  La Vega '' is a film based on the novel by Antonio del Giocondo .  La Vega '' is a film based on Antonio del Giocondo , a novel by Antonio del Gioc
+[true] Given the sets of books the user prefers and does not prefer, determine if the user will appreciate the target book by replying "Yes." or "No.". Preferred films: "Tierra", "Paraules emmetzinades", "Les mares no abandonen" Unpreferred films: "Bonjour tristesse", "The Picture of Dorian Gray", "The Secret History" Whether the user will like the target book "Realm of Kings: an enemies to lovers fae fantasy"?
+
+[pred] Suppose it's true that The Great Gatsby is a novel by F. Scott Fitzgerald. It was first published in 1925 and is set in the Roaring Twenties. Then, is "The Great Gatsby is a romance novel set in the 1920s" always
+[true] Analyze the books the user enjoys and those they dislike, and respond "Yes." or "No." to indicate if they will like the target book. Books user enjoys: "All the Young Dudes: Bootleg Tapes", "All the Young Dudes", "If We Were Villains" Books user dislikes: "The Setting Sun", "Dress up in You", "Klara and the Sun" Whether the user will like the target book "The Trimmed Lamp and Other Stories of the Four Million"?
+
+[pred] Predict the user's preference based on the given user preferences: "The book is a thriller.", "The book has a plot twist.", "The book has a protagonist with an unusual personality."
+[true] Given the user's preference and unpreference, identify whether the user will like the target book by answering "Yes." or "No.". User Preference: "Thirteen Reasons Why", "The Boy in the Striped Pajamas", "To Kill a Mockingbird" User Unpreference: "And the Mountains Echoed", "The Great Gatsby", "Fahrenheit 451" Whether the user will like the target book "Las Mil y una noches"?
+
+[pred] The Lord of the Rings is an epic high fantasy novel written by English author J.R.R. Tolkien. It was first published in three volumes in 1954 and 1955. Based on that information, is the claim: "The Lord of the Rings is a romance novel." true,
+[true] Given the sets of books the user prefers and does not prefer, determine if the user will appreciate the target book by replying "Yes." or "No.". Preferred films: "The Song of Achilles", "Anne of Green Gables: A Norton Critical Edition", "The Devil Wears Prada" Unpreferred films: "The Secret Garden", "Cleopatra and Frankenstein", "Two Can Keep a Secret" Whether the user will like the target book "Max Wilkins"?
+
+[pred] Suppose it's true that "The Catcher in the Rye" is a novel by J.D. Salinger, first published in 1951. The book is set in the fictional town of Little Britain, England. Then, is "The Catcher in the Rye is a children
+[true] Given the sets of books the user prefers and does not prefer, determine if the user will appreciate the target book by replying "Yes." or "No.". Preferred films: "Where the Sidewalk Ends", "The Kite Runner", "Speak" Unpreferred films: "I Know This Much Is True", "The Perks of Being a Wallflower", "Little Women" Whether the user will like the target book "Boston Black Ops 2"?
+
+[pred] Identify the topic of the article. output one of the following: 1) technology; 2) business; 3) sports; 4) entertainment; 5) health; 6) science. Article: The United States has withdrawn from the Paris Climate Agreement. Output:
+[true] Given the user's preference and unpreference, identify whether the user will like the target book by answering "Yes." or "No.". User Preference: "A Thousand Splendid Suns", "The Husband's Secret", "The Goldfinch" User Unpreference: "Double Act", "Normal People", "The Poisonwood Bible" Whether the user will like the target book "The Rainforest Scorecard: A Practical Framework for Growing Innovation Potential"?
+
+[pred] Suppose it's true that "To Kill a Mockingbird" is a novel by Harper Lee, published in 1960. It won the Pulitzer Prize and has become a classic of modern American literature. Then, is "Harper Lee only wrote one book in his lifetime." always
+[true] Given the user's preference and unpreference, identify whether the user will like the target book by answering "Yes." or "No.". User Preference: "A Tree Grows in Brooklyn", "Don Quixote", "Lord of the Flies" User Unpreference: "Cry, the Beloved Country", "Macbeth", "1984" Whether the user will like the target book "Bigfoot Sasquatch Files: Volume 1"?
+
+[pred] Detect if there is any sexist language in the text. If there is, suggest an alternative. Otherwise, output "No sexist language detected.": "The book "To Kill a Mockingbird" was written by Harper Lee. It was published in 1960. OPTION
+[true] Given the user's preference and unpreference, identify whether the user will like the target book by answering "Yes." or "No.". User Preference: "The Help", "Verity", "The Great Gatsby" User Unpreference: "The Catcher in the Rye", "Where the Crawdads Sing", "Wuthering Heights" Whether the user will like the target book "Lao Tzu: Tao Te Ching"?
+
+[pred] Suppose it's true that "The Hunger Games" is a series of young adult dystopian novels written by Suzanne Collins. The series consists of seven books, including "The Hunger Games", "Alice in Wonderland", "The Hunger Games", "Pride and Prejudice
+[true] Given the sets of books the user prefers and does not prefer, determine if the user will appreciate the target book by replying "Yes." or "No.". Preferred films: "Spare", "Greenlights", "Cujo" Unpreferred films: "First Lie Wins", "The Women", "Malibu Rising" Whether the user will like the target book "Finland"?
+
+
+
+==============================================================================
+
+Test set: eval
+pred_num_tokens: 62.203125
+true_num_tokens: 64.0
+token_set_precision: 0.18437184311152516
+token_set_recall: 0.19786132801088158
+token_set_f1: 0.1873204626902978
+token_set_f1_sem: 0.0025300925609209437
+n_ngrams_match_1: 9.95
+n_ngrams_match_2: 1.058
+n_ngrams_match_3: 0.318
+num_true_words: 51.928
+num_pred_words: 46.124
+bleu_score: 2.1154209342693893
+bleu_score_sem: 0.11815903889361741
+rouge_score: 0.13628221801504903
+exact_match: 0.0
+exact_match_sem: 0.0
+emb_cos_sim: 0
+emb_cos_sim_sem: 0
+eval_item_match: 0.0014
+eval_profile_match: 0.0
+
+
+=== Last 20 samples ===
+
+[pred] Suppose it's true that Star Wars is an American epic space-opera media franchise created by George Lucas. The franchise began with the eponymous 1977 film and quickly became a worldwide pop-culture phenomenon. Then, is "Star Wars was directed by George Lucas." always, sometimes,
+[true] Question: User 661 who is a female aged 36 has given high ratings to the following movies: "Mighty, The", "American Beauty", "French Connection, The", "Psycho", "Princess Bride, The", "Seventh Seal, The" with their
+
+[pred] Suppose it's true that "The Matrix" is a science fiction action film written and directed by the Wachowskis. It stars Keanu Reeves, Laurence Fishburne, and Carrie-Anne Moss. Then, is "The Matrix is
+[true] Question: User 436 who is male of 56 years has given high ratings to the following movies: "Contact", "Star Wars: Episode VI - Return of the Jedi", "Wallace & Gromit: The Best of Aardman Animation", "Terminator, The", "Li
+
+[pred] Suppose it's true that "The Shawshank Redemption" is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella "Rita Hayworth and Shawshank Redemption". Then, is "The Shaw
+[true] Question: User 466 who is male of 49 years has given high ratings to the following movies: "400 Blows, The", "Fast Times at Ridgemont High", "Princess Bride, The", "Dog Day Afternoon", "Sullivan's Travels
+
+[pred] Suppose "The Godfather" is a 1972 American crime film directed by Francis Ford Coppola and produced by Albert S. Ruddy, based on Mario Puzo's best-selling novel of the same name. Can we infer that "The Godfather was adapted into a
+[true] Question: User 696 who is 42-year-old female has given high ratings to the following movies: "Drugstore Cowboy", "Dead Men Don't Wear Plaid", "Straight Story, The", "Godfather: Part II, The", "Arthur",
+
+[pred] Suppose it's true that "The Shawshank Redemption" is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella "Rita Hayworth and Shawshank Redemption". Then, is "The Shaw
+[true] Question: User 377 who is male of 33 years has given high ratings to the following movies: "Beauty and the Beast", "L.A. Confidential", "Clockwork Orange, A", "JFK", "Saving Private Ryan", "Time Bandits
+
+[pred] - years active is 2004 -- present - starring is eddie murphy - birth date is october 27, 1987 - birth place is san francisco , san francisco , california - ratings are the
+[true] Question: User 61 who is male of 57 years has given high ratings to the following movies: "Space Cowboys", "Patriot, The", "Meet the Parents", "Almost Famous", "Bring It On", "Titanic" with their IDs:
+
+[pred] Suppose it's true that The Beatles were an English rock band formed in Liverpool in 1960. With members John Lennon, Paul McCartney, George Harrison, and Ringo Starr, they are regarded as the most influential band of all time. Then, is "The Beatles were
+[true] Question: User 231 who is male of 21 years has given high ratings to the following movies: "My Fair Lady", "Godfather: Part II, The", "Jungle Book, The", "Dead Men Don't Wear Plaid", "Princess Bride, The
+
+[pred] The Matrix (film) -- In 2019, the film was adapted from the 2006 novel "Inception" by Xavier Malisse. The film stars Keanu Reeves and Denzel Washington. Having read that, I wonder when was the film adapted from "Inception"
+[true] Question: User 705 who is a female aged 25 has given high ratings to the following movies: "Nosferatu", "South Park: Bigger, Longer and Uncut", "Fantasia 2000", "Star Wars: Episode I - The Phantom Menace", "Sil
+
+[pred] The Mona Lisa is a half-length portrait painting by the Italian artist Leonardo da Vinci. It is housed in the Louvre Museum in Paris, France. Using only the above description and what you know about the world, "The Mona Lisa is a sculpture created by Michelange
+[true] Question: User 309 who is male of 68 years has given high ratings to the following movies: "Princess Bride, The", "Rain Man", "Abyss, The", "Alien: Resurrection", "Armageddon", "Reservoir Dog
+
+[pred] The exercise is to decide whether the question accepts the proposed suggestion as a correct answer. If yes, write "True", otherwise write "False". Question: who played jack smight in smight? Suggestion: The film was a box office success,
+[true] Question: User 120 who is female of 66 years has given high ratings to the following movies: "Boogie Nights", "Schindler's List", "Silence of the Lambs, The", "Raiders of the Lost Ark", "Sting, The", "
+
+[pred] What would be the rating of the following movies?: "The Godfather" - 9.2, "The Shawshank Redemption" - 9.2 - 9.2 - "The Dark Knight"
+[true] Question: User 765 who is 52-year-old female has given high ratings to the following movies: "Blazing Saddles", "Jurassic Park", "Weird Science", "Braveheart", "Titanic", "Maverick"
+
+[pred] Suppose it's true that The Associated Press has reported that former United States Secretary of State Condoleezza Rice was "assassinated" and "abducted" by Russian authorities. Then, is "Barack Obama was the first female Secretary of State in the United States
+[true] Question: User 219 who is 62-year-old male has given high ratings to the following movies: "Vacation", "Clerks", "Saving Private Ryan", "Bone Collector, The", "Austin Powers: The Spy Who Shagged Me", "
+
+[pred] Suppose it's true that The Beatles were an English rock band formed in Liverpool in 1960. With members John Lennon, Paul McCartney, George Harrison, and Ringo Starr, they are regarded as the most influential band of all time. Then, is "The Beatles were
+[true] Question: User 476 who is male of 48 years has given high ratings to the following movies: "African Queen, The", "Cape Fear", "Men in Black", "Muppet Movie, The", "Dumb & Dumber", "Soapdish" with
+
+[pred] - years active is 2005 -- present - birth date is june 4 , 1990 - birth place is san francisco , san francisco , california , u.s. - occupation is actor Given the details above
+[true] Question: User 271 who is a female aged 44 has given high ratings to the following movies: "Can't Hardly Wait", "Wizard of Oz, The", "Jumanji", "Peter Pan", "Batman", "Dumbo" with their ID
+
+[pred] Suppose it's true that "To Kill a Mockingbird" is a novel by Harper Lee, published in 1960. It won the Pulitzer Prize and has become a classic of modern American literature. Then, is "Harper Lee is a professional football player who played for
+[true] Question: User 398 who is a male aged 21 has given high ratings to the following movies: "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb", "Christmas Story, A", "Clueless", "Raising Arizona
+
+[pred] The Golden Age is a 2006 American science fiction action film directed by Steven Spielberg, based on the novel of the same name by George Lucas. The film stars Tom Hanks, Robin Wright, and Sam Worthington. Who is the director of the Golden Age, "The Golden Age"?
+[true] Question: User 704 who is male of 62 years has given high ratings to the following movies: "Maltese Falcon, The", "Fight Club", "Election", "Stir of Echoes", "Ravenous", "Austin Powers: The
+
+[pred] Suppose it's true that The Shawshank Redemption is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. Then, is "The Shawshank Red
+[true] Question: User 751 who is male of 38 years has given high ratings to the following movies: "Hellraiser", "One Crazy Summer", "Rosemary's Baby", "Repo Man", "Star Wars: Episode VI - Return of the Jedi", "S
+
+[pred] Is there a negative or positive tone to this product review? === Title: Great Animated Movie Review: This movie is a great Animated. The characters are so well-developed and the story is very interesting. I would highly recommend it to anyone looking for a good 
+[true] Question: User 142 who is male of 34 years has given high ratings to the following movies: "Titan A.E.", "X-Men", "Iron Giant, The", "Lion King, The", "Beauty and the Beast", "Be
+
+[pred] Suppose it's true that "Bohemian Rhapsody" is a song by the British rock band Queen. It was written by Freddie Mercury for the band's 1975 album "A Night at the Opera". Then, is "Bohemian Rhaps
+[true] Question: User 527 who is male of 44 years has given high ratings to the following movies: "Sixteen Candles", "Silence of the Lambs, The", "Graduate, The", "Fast Times at Ridgemont High", "When Harry Met Sally..."
+
+[pred] - years active is 1994 -- present - birth date is july 7 , 1981 - nationality is american - birth place is san francisco , california , u.s. - occupation is actor , director Given the details
+[true] Question: User 225 who is 67-year-old male has given high ratings to the following movies: "Exotica", "Lion King, The", "Passion Fish", "Bound", "Straight Story, The", "Trees Lounge" with
+
+
+
+==============================================================================
+
+Test set: eval
+pred_num_tokens: 61.7578125
+true_num_tokens: 64.0
+token_set_precision: 0.18854715109150336
+token_set_recall: 0.2152000268600509
+token_set_f1: 0.19592999508992065
+token_set_f1_sem: 0.0026563971807562013
+n_ngrams_match_1: 10.192
+n_ngrams_match_2: 1.626
+n_ngrams_match_3: 0.414
+num_true_words: 52.178
+num_pred_words: 46.892
+bleu_score: 2.5638518652096263
+bleu_score_sem: 0.13578786752060729
+rouge_score: 0.15983269621642943
+exact_match: 0.0
+exact_match_sem: 0.0
+emb_cos_sim: 0
+emb_cos_sim_sem: 0
+eval_item_match: 0.0036666666666666666
+eval_profile_match: 0.0
+
+
+=== Last 20 samples ===
+
+[pred] Suppose The exercise is to decide whether the question accepts the proposed suggestion as a correct answer. If yes, write "True", otherwise write "False". Question: what is a sex symbol Suggestion: The symbol is , meaning '' in Latin 
+[true] Question: User 15829 who is 19-year-old male has given high ratings to the following books: "Marvel Universe Vs. Wolverine", "Y: The Last Man, Vol. 6: Girl on Girl", "Fables, Vol. 9: Sons of Empire
+
+[pred] Suppose it's true that The widow of John Lennon, Yoko Ono, may take legal action against a new breakfast cereal called "Strawberry Fields," which she believes is too close in name to Lennon's song. Then, is "
+[true] Question: User 20875 who is a female aged 47 has given high ratings to the following books: "The Running Girls", "The Woman in the Woods", "The Secrets We Buried", "The Alibi", "Three Sisters", "The New Neighbours" with
+
+[pred] Is there a negative or positive tone to this book review? === Title: A Very Good Book Review: I've read this book for a while now and I'm pleasantly surprised by the quality of the characters. The plot is a bit predictable, but the writing is excellent
+[true] Question: User 14005 who is a female aged 50 has given high ratings to the following books: "One Long Weekend", "The Engagement Party", "Her Last Summer", "Ask for Andrea", "The Forgetting", "Her Husband's Lie" with their IDs:
+
+[pred] Suppose it's true that The Beatles were an English rock band formed in Liverpool in 1960. With members John Lennon, Paul McCartney, George Harrison, and Ringo Starr, they are regarded as the most influential band of all time. Then, is "The Beatles were
+[true] Question: User 3649 who is male of 58 years has given high ratings to the following books: "Exhalation", "Liar's Poker", "The Systems View of Life: A Unifying Vision", "A Short History of Nearly Everything", "Cosmos", "An
+
+[pred] And you're wrong about us. We're not children and I 'd say we're learning the rules pretty quickly.'' You may have noticed I'm not shaking any more! 333333333
+[true] Question: User 18988 who is 65-year-old female has given high ratings to the following books: "The Surrogate", "The Teacher", "Lie by the Pool", "The Girl Beyond the Gate", "All Her Little Lies", "The Girl Who Survived" with
+
+[pred] Suppose it's true that "The Wizard of Oz" is a novel by American author J.D. Salinger. It was first published in the United States in 1951. Then, is "The Wizard of Oz is a children's book written by J.D. Salinger"
+[true] Question: User 7826 who is 40-year-old male has given high ratings to the following books: "Stellaluna", "The Monster at the End of this Book", "milk and honey", "Where the Sidewalk Ends", "The Discoverers: A History of Man'
+
+[pred] Suppose The Hunger Games is a series of young adult dystopian novels written by American author Suzanne Collins. The books were first published in 2008. Can we infer that "Suzanne Collins' books were adapted into successful films and television series."? Yes, no, or maybe?
+[true] Question: User 18382 who is female of 69 years has given high ratings to the following books: "The Girl from the Sea", "Nobody Likes a Goblin", "Sidekicks: A Graphic Novel", "The Prince and the Dressmaker", "Paper Girls,
+
+[pred] Suppose it's true that The Queen of England and the Knights of the Round Table are two of the greatest novels in the English language. The novel was first published in 1813 and has since become a classic of English literature. Then, is "The Queen of England and the Knights of
+[true] Question: User 3231 who is 24-year-old male has given high ratings to the following books: "The Bookbinder of Jericho", "Gurawul the Whale", "The Last Woman in the World", "The Salt Path", "The Midnight Library", "Once There Were
+
+[pred] Suppose it's true that The Secret Recipe is a cookbook written by a Japanese chef. It was first published in the United States in 1939. Then, is "The Secret Recipe is a cookbook that was first published in the United States in 1939." always, sometimes, or never
+[true] Question: User 21503 who is a male aged 67 has given high ratings to the following books: "Vive Le Color! Japan : Color In; De-stress", "The Nightmare Before Dinner: Recipes to Die For: The Beetle House Cookbook", "
+
+[pred] Suppose it's true that "The Secret Garden" is a novel by Chinese author Sun Tzu. It was first published in 1879 and is considered one of the most famous works of Chinese literature. Then, is "The Secret Garden was written by Jane Austen" always, sometimes, or
+[true] Question: User 12235 who is 47-year-old female has given high ratings to the following books: "The Tea Girl of Hummingbird Lane", "The Pearl That Broke Its Shell", "Calling Me Home", "Snow Flower and the Secret Fan", "The Alice Network", "
+
+[pred] Suppose it's true that A: I'm thinking of taking a break from work. B: That's a great idea. A: But, I'm not sure if I'm ready for it. B: Well, I'm not sure if I'm
+[true] Question: User 21409 who is male of 25 years has given high ratings to the following books: "My Brother Made Me Do It", "Blended", "Spy School", "Desert Danger", "The Richest Kids in Town", "Dangerous Deception"
+
+[pred] Suppose it's true that The Great Gatsby is a novel by F. Scott Fitzgerald, first published in 1925. It is set in the summer of 1922 and follows the life of Jay Gatsby. Then, is "The Great Gatsby is a romance
+[true] Question: User 12974 who is a female aged 45 has given high ratings to the following books: "The Paradise Problem", "You Don't Have to Say You Love Me", "Bye, Baby", "Perfect Together", "Book Lovers", "The Manor
+
+[pred] Suppose it's true that "The Catcher in the Rye" is a novel by J.D. Salinger, first published in 1951. The book is set in the fictional town of Little Britain, England. Then, is "The book is a romance novel." always, sometimes
+[true] Question: User 1266 who is a male aged 20 has given high ratings to the following books: "An Abundance of Katherines", "Looking for Alaska", "Where the Sidewalk Ends", "It", "The Fault in Our Stars", "Of Mice
+
+[pred] Using the following information, write a short biography: "Name: Susan B. Anthony Author: "To Kill a Mockingbird" Author: Harper Lee Published: "To Kill a Mockingbird" Author: Harper Lee""
+[true] Question: User 14008 who is male of 42 years has given high ratings to the following books: "Loss Of Innocence: A Daughter's Journey into the Underworld of Meth Addiction and a Father's Fight to Bring Her Back", "Tweak: Growing
+
+[pred] Suppose it's true that "Hamlet" is a 1994 American romantic drama film directed by Steven Spielberg. It is based on the novel of the same name by George R.R. Martin. Then, is "Hamlet is a horror film based on the novel
+[true] Question: User 21853 who is a male aged 32 has given high ratings to the following books: "A Tap on the Window", "Headhunters", "Blood Orange", "The Shining Girls", "A Slow Fire Burning", "Her Last Holiday" with
+
+[pred] Suppose it's true that "The Great Gatsby" is a novel by F. Scott Fitzgerald, first published in 1925. It is set in the Roaring Twenties and follows the life of Jay Gatsby, a wealthy and mysterious man. Then, is "
+[true] Question: User 18860 who is female of 56 years has given high ratings to the following books: "It", "Catching Fire: The Official Illustrated Movie Companion", "The Twilight Saga: The Complete Film Archive: Memories, Mementos, and Other
+
+[pred] Suppose "The Great Gatsby" is a novel by F. Scott Fitzgerald, first published in 1925. It is set in the Roaring Twenties and follows the life of Jay Gatsby, a wealthy and mysterious man. Can we infer that "The Great Gat
+[true] Question: User 21103 who is a male aged 34 has given high ratings to the following books: "Fables, Vol. 1: Legends in Exile", "Grimm's Fairy Tales: The Complete Household Tales of Jakob and Wilhelm Grimm Volume I
+
+[pred] Suppose it's true that the Great Gatsby is a novel by F. Scott Fitzgerald, published in 1925. It is set in the summer of 1922 and tells the story of Jay Gatsby and his love for Daisy Buchanan. Then, is "The Great
+[true] Question: User 3269 who is a female aged 56 has given high ratings to the following books: "A Gentleman in Moscow", "Such a Fun Age", "America's First Daughter", "Traction: Get a Grip on Your Business", "A Dream about Lightning Bugs
+
+[pred] The film "To Kill a Mockingbird" was released in 1960 and directed by Harper Lee. It starred Marlon Brando, Al Pacino, and James Caan. The film stars Robert Downey Jr., Stephen Lang, and Michelle Obama. What is the name of the
+[true] Question: User 19172 who is 46-year-old male has given high ratings to the following books: "The Family Across the Street", "Dark Matter", "The Gone World", "The Lost Girls: The True Story of the Cleveland Abductions and the Incredible Rescue of Michelle Knight,
+
+[pred] Suppose it's true that "The Catcher in the Rye" is a novel by J.D. Salinger, first published in 1951. The book is set in the fictional town of Little Britain, England. Then, is "The Catcher in the Rye is a novel
+[true] Question: User 2683 who is male of 23 years has given high ratings to the following books: "The Seven Husbands of Evelyn Hugo", "Pride and Prejudice", "A Short History of Nearly Everything", "A Brief History of Time", "Freakonomics:
+
+
+

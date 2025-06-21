@@ -1,0 +1,65 @@
+{
+  "binary_classification": [
+    "Given the user's profile, preference and unpreference, identify whether the user will like the target movie by answering \"Yes.\" or \"No.\". The user is a {age}-year-old {gender}. User Preference: {pref}. User Unpreference: {unpref}. Whether the user will like the target movie {target}?",
+    "Question: User {user_id} who is a {age}-year-old {gender} has given high ratings to the following movies: {movie_names} with their IDs: {movie_ids}. Identify whether the user would enjoy the movie titled {target} with its ID {target_id}? Answer with \"Yes\" or \"No\". Answer:",
+    "Given the user's profile, and the sets of movies the user prefers and does not prefer, determine if the user will appreciate the target movie by replying \"Yes.\" or \"No.\". The user is a {age}-year-old {gender}. Preferred movies: {pref}. Nonpreferred movies: {unpref}. Whether the user will like the target movie {target}?",
+    "Analyze the user's profile, the movies the user likes and those they dislike, and respond \"Yes.\" or \"No.\" to indicate if they will like the target movie. The user is a {age}-year-old {gender}. Movies user likes: {pref}. Movies user dislikes: {unpref}. Whether the user will like the target movie {target}?",
+    "If a {age}-year-old {gender} user enjoys: {pref}, yet dislikes: {unpref}, would they also enjoy: {target}? Answer \"Yes.\" or \"No.\".",
+    "The user is a {age}-year-old {gender}. Considering the user likes: {pref}, but dislikes: {unpref}, do you think they would like: {target}? Answer \"Yes.\" or \"No.\".",
+    "Given that user {user_id} has positively rated the following movies: {movie_names} (IDs: {movie_ids}), is the user likely to enjoy '{target}'? Respond with \"Yes.\" or \"No.\".",
+    "Binary choice: Does the preference list: {movie_names} imply a positive reaction to {target}? Answer \"Yes\" or \"No\".",
+    "Given the user's preference and unpreference, identify whether the user will like the target movie by answering \"Yes.\" or \"No.\". User Preference: {pref}. User Unpreference: {unpref}. Whether the user will like the target movie {target}?",
+    "Question: User {user_id} has given high ratings to the following movies: {movie_names} with their IDs: {movie_ids}. Identify whether the user would enjoy the movie titled {target} with its ID {target_id}? Answer with \"Yes\" or \"No\". Answer:"
+  ],
+
+  "direct_recommendation": [
+    "Recommend a suitable movie for a {age}-year-old {gender} user based on their preferences: {movie_names}.",
+    "Given a {age}-year-old {gender} user's preference: {movie_names}, recommend a movie they are most likely to enjoy.",
+    "Given the user's profile, preference and unpreference, predict a movie the user is most likely to watch next. The user is a {age}-year-old {gender}. User Preference: {pref}. User Unpreference: {unpref}.",
+    "User {user_id} who is a {age}-year-old {gender} has given high ratings to the following movies: {movie_names} with their IDs: {movie_ids}. Recommend a movie they are most likely to enjoy. Answer:",
+    "One-shot recommendation: what movie best suits a {age}-year-old {gender} viewer who likes {movie_names}?",
+    "One-shot recommendation: what movie best suits a {age}-year-old {gender} viewer who likes {pref}, yet dislikes {unpref}?",
+    "Recommend a suitable movie for the user based on their preferences: {movie_names}.",
+    "Given the user's preference and non-preference, recommend a movie they are most likely to enjoy. User Preference: {pref}. User Unpreference: {unpref}.",
+    "Direct recommendation: what movie would you recommend to a {age}-year-old {gender} viewer based on their preferences: {movie_names}?",
+    "Direct recommendation: what movie would you recommend to a {age}-year-old {gender} viewer based on their preferences: {pref}, and non-preferences: {unpref}?"
+  ],
+  
+  "sequential_recommendation": [
+    "The user has interacted with the following movies in order: {his}. Predict the next movie they will interact with.",
+    "Given a {age}-year-old {gender} user's rating history: {his}, predict the next movie they may watch.",
+    "Based on the chronological list {his}, forecast the next likely movie in the sequence.",
+    "The user has interacted with {his}. Recommend a new movie they might like.",
+    "Given the user's profile and viewing history, predict a movie the user is most likely to watch next. The user is a {age}-year-old {gender}. Viewing history: {his}.",
+    "Given a {age}-year-old {gender} user's viewing history: {his}, recommend a movie they are most likely to watch next.",
+    "Recommend a new movie for a {age}-year-old {gender} user if they watched the following movies before: {his}.",
+    "Given the user's viewing history, recommend a movie they are most likely to enjoy. Viewing history: {his}.",
+    "Sequential recommendation: what movie would you recommend to a {age}-year-old {gender} viewer based on their viewing history: {his}?",
+    "Sequential recommendation: what movie should a {age}-year-old {gender} viewer watch next if they have watched {his}?"
+  ],
+
+  "rating_prediction": [
+    "Given the user's rating records: {rating_rec}. Predict how the user would rate the movie {targetTitle}.",
+    "The user has rated the following movies: {his} as {rating}. Predict how the user would rate the movie {targetTitle}.",
+    "Estimate the rating a user would assign to {targetTitle} using their past ratings {rating_rec}.",
+    "User ratings history: {rating_rec}. What score will they give {targetTitle}?",
+    "Predict on a 1-5 scale how the user will rate {targetTitle} based on their evaluations: {rating_rec}.",
+    "Considering ratings pattern {rating_rec}, forecast the expected rating for {targetTitle}.",
+    "Using collaborative sense, compute the probable rating of {targetTitle} for this viewer, referencing {rating_rec}.",
+    "Rating inference: for a user with rating history {rating_rec}, estimate their star rating for {targetTitle}.",
+    "From these past ratings {rating_rec}, predict the numeric score (e.g., 1-5) the user will assign to {targetTitle}."
+  ],
+
+  "cold_start": [
+    "Recommend a suitable movie to a new user with profile (age: {age}, gender: {gender}) who is interested in {taste}.",
+    "Recommend a suitable movie to a new user who is a {age}-years-old {gender} and likes {movie_names}.",
+    "Given a new user's profile and preference, recommend a movie for them. The user is a {age}-year-old {gender}. User Preference: {taste}.",
+    "Given a new user's profile and preference, recommend a movie for them. The user is a {age}-year-old {gender}. User Preference: {movie_names}.",
+    "New viewer: {age} {gender} expresses interest in {taste}. Suggest one movie to start with.",
+    "Cold-start recommendation: choose a movie that suits a {age}-year-old {gender} whose stated interest is {taste}.",
+    "Cold-start recommendation: choose a movie that suits a {age}-year-old {gender} whose highly rated {movie_names}.",
+    "A {age}-years-old {gender} who likes {taste} is new to our platform. Based on their demographic profile, recommend a movie they might enjoy.",
+    "A new user (age: {age}, gender: {gender}) has expressed interest in {taste}. Based on these interests, suggest a new movie they might like.",
+    "A new user (age: {age}, gender: {gender}) has expressed the movies they preferred: {movie_names}. Based on the preference, suggest a new movie they might like."
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "binary_classification": [
+    "Given the user's profile, preference and unpreference, identify whether the user will like the target book by answering \"Yes.\" or \"No.\". The user is a {age}-year-old {gender}. User Preference: {pref}. User Unpreference: {unpref}. Whether the user will like the target book {target}?",
+    "Question: User {user_id} who is a {age}-year-old {gender} has given high ratings to the following books: {book_names} with their IDs: {book_ids}. Identify whether the user would enjoy the book titled {target} with its ID {target_id}? Answer with \"Yes\" or \"No\". Answer:",
+    "Given the user's profile, and the sets of books the user prefers and does not prefer, determine if the user will appreciate the target book by replying \"Yes.\" or \"No.\". The user is a {age}-year-old {gender}. Preferred books: {pref}. Nonpreferred books: {unpref}. Whether the user will like the target book {target}?",
+    "Analyze the user's profile, the books the user likes and those they dislike, and respond \"Yes.\" or \"No.\" to indicate if they will like the target book. The user is a {age}-year-old {gender}. Books user likes: {pref}. Books user dislikes: {unpref}. Whether the user will like the target book {target}?",
+    "If a {age}-year-old {gender} user enjoys: {pref}, yet dislikes: {unpref}, would they also enjoy: {target}? Answer \"Yes.\" or \"No.\".",
+    "The user is a {age}-year-old {gender}. Considering the user likes: {pref}, but dislikes: {unpref}, do you think they would like: {target}? Answer \"Yes.\" or \"No.\".",
+    "Given that user {user_id} has positively rated the following books: {book_names} (IDs: {book_ids}), is the user likely to enjoy '{target}'? Respond with \"Yes.\" or \"No.\".",
+    "Binary choice: Does the preference list: {book_names} imply a positive reaction to {target}? Answer \"Yes\" or \"No\".",
+    "Given the user's preference and unpreference, identify whether the user will like the target book by answering \"Yes.\" or \"No.\". User Preference: {pref}. User Unpreference: {unpref}. Whether the user will like the target book {target}?",
+    "Question: User {user_id} has given high ratings to the following books: {book_names} with their IDs: {book_ids}. Identify whether the user would enjoy the book titled {target} with its ID {target_id}? Answer with \"Yes\" or \"No\". Answer:"
+  ],
+
+  "direct_recommendation": [
+    "Recommend a suitable book for a {age}-year-old {gender} user based on their preferences: {book_names}.",
+    "Given a {age}-year-old {gender} user's preference: {book_names}, recommend a book they are most likely to enjoy.",
+    "Given the user's profile, preference and unpreference, predict a book the user is most likely to read next. The user is a {age}-year-old {gender}. User Preference: {pref}. User Unpreference: {unpref}.",
+    "User {user_id} who is a {age}-year-old {gender} has given high ratings to the following books: {book_names} with their IDs: {book_ids}. Recommend a book they are most likely to enjoy. Answer:",
+    "One-shot recommendation: what book best suits a {age}-year-old {gender} reader who likes {book_names}?",
+    "One-shot recommendation: what book best suits a {age}-year-old {gender} reader who likes {pref}, yet dislikes {unpref}?",
+    "Recommend a suitable book for the user based on their preferences: {book_names}.",
+    "Given the user's preference and non-preference, recommend a book they are most likely to enjoy. User Preference: {pref}. User Unpreference: {unpref}.",
+    "Direct recommendation: what book would you recommend to a {age}-year-old {gender} reader based on their preferences: {book_names}?",
+    "Direct recommendation: what book would you recommend to a {age}-year-old {gender} reader based on their preferences: {pref}, and non-preferences: {unpref}?"
+  ],
+  
+  "sequential_recommendation": [
+    "The user has interacted with the following books in order: {his}. Predict the next book they will interact with.",
+    "Given a {age}-year-old {gender} user's reading history: {his}, predict the next book they may read.",
+    "Based on the chronological list {his}, forecast the next likely book in the sequence.",
+    "The user has interacted with {his}. Recommend a new book they might like.",
+    "Given the user's profile and reading history, predict a book the user is most likely to read next. The user is a {age}-year-old {gender}. Reading history: {his}.",
+    "Given a {age}-year-old {gender} user's reading history: {his}, recommend a book they are most likely to read next.",
+    "Recommend a new book for a {age}-year-old {gender} user if they read the following books before: {his}.",
+    "Given the user's reading history, recommend a book they are most likely to enjoy. Reading history: {his}.",
+    "Sequential recommendation: what book would you recommend to a {age}-year-old {gender} reader based on their reading history: {his}?",
+    "Sequential recommendation: what book should a {age}-year-old {gender} reader read next if they have read {his}?"
+  ],
+
+  "rating_prediction": [
+    "Given the user's rating records: {rating_rec}. Predict how the user would rate the book {targetTitle}.",
+    "The user has rated the following books: {his} as {rating}. Predict how the user would rate the book {targetTitle}.",
+    "Estimate the rating a user would assign to {targetTitle} using their past ratings {rating_rec}.",
+    "User ratings history: {rating_rec}. What score will they give {targetTitle}?",
+    "Predict on a 1-5 scale how the user will rate {targetTitle} based on their evaluations: {rating_rec}.",
+    "Considering ratings pattern {rating_rec}, forecast the expected rating for {targetTitle}.",
+    "Using collaborative sense, compute the probable rating of {targetTitle} for this reader, referencing {rating_rec}.",
+    "Rating inference: for a user with rating history {rating_rec}, estimate their star rating for {targetTitle}.",
+    "From these past ratings {rating_rec}, predict the numeric score (e.g., 1-5) the user will assign to {targetTitle}."
+  ],
+
+  "cold_start": [
+    "Recommend a suitable book to a new user with profile (age: {age}, gender: {gender}) who is interested in {taste}.",
+    "Recommend a suitable book to a new user who is a {age}-years-old {gender} and likes {book_names}.",
+    "Given a new user's profile and preference, recommend a book for them. The user is a {age}-year-old {gender}. User Preference: {taste}.",
+    "Given a new user's profile and preference, recommend a book for them. The user is a {age}-year-old {gender}. User Preference: {book_names}.",
+    "New reader: {age} {gender} expresses interest in {taste}. Suggest one book to start with.",
+    "Cold-start recommendation: choose a book that suits a {age}-year-old {gender} whose stated interest is {taste}.",
+    "Cold-start recommendation: choose a book that suits a {age}-year-old {gender} who highly rated {book_names}.",
+    "A {age}-years-old {gender} who likes {taste} is new to our platform. Based on their demographic profile, recommend a book they might enjoy.",
+    "A new user (age: {age}, gender: {gender}) has expressed interest in {taste}. Based on these interests, suggest a new book they might like.",
+    "A new user (age: {age}, gender: {gender}) has expressed the books they preferred: {book_names}. Based on the preference, suggest a new book they might like."
+  ]
+}

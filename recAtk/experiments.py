@@ -4,7 +4,6 @@ import hashlib
 import json
 import logging
 import os
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 import resource
 import sys
 sys.path.append('./')

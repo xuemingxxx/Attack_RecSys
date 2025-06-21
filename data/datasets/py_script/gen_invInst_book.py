@@ -34,8 +34,8 @@ combined_results = []
 
 for ds in datasets:
     # Read the single CSV that already contains book & rating info
-    df = pd.read_csv(ds["file"])
-    user_ids = sorted(df["user_key"].unique())
+    books_df = pd.read_csv(ds["file"])
+    user_ids = sorted(books_df["user_key"].unique())
 
     results = []
     idx = 0
@@ -44,7 +44,7 @@ for ds in datasets:
     while len(results) < ds["target"]:
         uid = user_ids[idx % len(user_ids)]
         idx += 1
-        user_data = df[df["user_key"] == uid]          # no timestamp sort needed
+        user_data = books_df[books_df["user_key"] == uid]          # no timestamp sort needed
 
         # Split by preference
         high      = user_data[user_data["rating"] >= k]
@@ -66,41 +66,86 @@ for ds in datasets:
 
         # ── Fill the template dynamically ─────────────────
         if task == "binary_classification":
-            # 1 target + (n-1) titles; pref ≥ unpref, diff ≤ 1
-            unpref_need = (n - 1) // 2
-            pref_need   = (n - 1) - unpref_need
+            need_pref        = "{pref}"        in template
+            need_unpref      = "{unpref}"      in template
+            need_book_names  = "{book_names}"  in template
+            need_book_ids    = "{book_ids}"    in template
+            need_uid         = "{user_id}"     in template
+
+            usable_n = n - 1        # 1 个 target，剩下 usable_n 个历史图书
+
+            if need_pref or need_unpref:                       # pref / unpref 版本
+                unpref_need = usable_n // 2                    # floor
+                pref_need   = usable_n - unpref_need           # ceil
+            else:                                              # 只有 book_names
+                pref_need   = usable_n
+                unpref_need = 0
+
             if len(high_list) < pref_need or len(low_list) < unpref_need:
                 continue
 
             pref_sample   = random.sample(high_list, pref_need)
-            unpref_sample = random.sample(low_list,  unpref_need)
+            unpref_sample = random.sample(low_list,  unpref_need) if unpref_need else []
+            pref_names   = ", ".join(f'"{t}"' for t, _ in pref_sample)
+            pref_ids     = ", ".join(str(mid) for _, mid in pref_sample)
+            unpref_names = ", ".join(f'"{t}"' for t in unpref_sample)
 
-            book_names = ", ".join(f'"{t}"' for t, _ in pref_sample)
-            book_ids   = ", ".join(str(bid) for _, bid in pref_sample)
+            book_names_str = pref_names         # 仅喜欢图书的集合
+            book_ids_str   = pref_ids
 
-            candidates = df[~df["book_key"].isin(user_data["book_key"])]
+            candidates = books_df[~books_df["book_key"].isin(user_data["book_key"])]
             if candidates.empty:
-                candidates = df
+                candidates = books_df
             tgt = candidates.sample(1).iloc[0]
 
-            prompt = template.format(
-                age=age, gender=gender,
-                pref=book_names,
-                unpref=", ".join(f'"{t}"' for t in unpref_sample),
-                target=f'"{tgt["title"]}"',
-                user_id=uid, book_names=book_names,
-                book_ids=book_ids,
-                target_title=tgt["title"], target_id=tgt["book_key"]
-            )
+            fmt = {
+                "age": age,
+                "gender": gender,
+                "pref": pref_names,
+                "unpref": unpref_names,
+                "book_names": book_names_str,
+                "book_ids": book_ids_str if need_book_ids else "",
+                "user_id": uid if need_uid else "",
+                "target": f'"{tgt["title"]}"',
+                "target_id": tgt["book_key"],
+            }
+            prompt = template.format(**fmt)
 
         elif task == "direct_recommendation":
-            if len(high_list) < n:
+            need_pref        = "{pref}"        in template
+            need_unpref      = "{unpref}"      in template
+            need_book_names  = "{book_names}"  in template
+            need_book_ids    = "{book_ids}"    in template
+            need_uid         = "{user_id}"     in template
+
+            if need_pref or need_unpref:                      # pref / unpref 版本
+                unpref_need = n // 2                          # floor(n/2)
+                pref_need   = n - unpref_need                 # 剩下给 pref（奇数时多 1）
+            else:                                             # book_names 版本
+                pref_need   = n                               # 全部都是喜欢的图书
+                unpref_need = 0
+
+            if len(high_list) < pref_need or len(low_list) < unpref_need:
                 continue
-            pref_sample = random.sample(high_list, n)
-            prompt = template.format(
-                age=age, gender=gender,
-                pref=", ".join(f'"{t}"' for t, _ in pref_sample)
-            )
+
+            pref_sample   = random.sample(high_list, pref_need)
+            unpref_sample = random.sample(low_list,  unpref_need) if unpref_need else []
+            pref_names   = ", ".join(f'"{t}"' for t, _ in pref_sample)
+            pref_ids     = ", ".join(str(mid) for _, mid in pref_sample)
+            unpref_names = ", ".join(f'"{t}"' for t in unpref_sample)
+
+            book_names_str = pref_names
+            book_ids_str   = pref_ids
+            fmt = {
+                "age": age,
+                "gender": gender,
+                "pref": pref_names,
+                "unpref": unpref_names,
+                "book_names": book_names_str,
+                "book_ids": book_ids_str if need_book_ids else "",
+                "user_id": uid if need_uid else "",
+            }
+            prompt = template.format(**fmt)
 
         elif task == "sequential_recommendation":
             if len(history) < n:
@@ -112,15 +157,15 @@ for ds in datasets:
             )
 
         elif task == "rating_prediction":
-            his_need = n - 1                      # leave 1 slot for target
+            his_need = n - 1          # reserve 1 title for target
             if len(history) < his_need or his_need <= 0:
                 continue
             his_r   = history[:his_need]
             rec_str = ", ".join(f'"{t}"-{r}' for t, r in his_r)
 
-            candidates = df[~df["book_key"].isin(user_data["book_key"])]
+            candidates = books_df[~books_df["book_key"].isin(user_data["book_key"])]
             if candidates.empty:
-                candidates = df
+                candidates = books_df
             tgt = candidates.sample(1).iloc[0]
 
             prompt = template.format(
@@ -130,14 +175,41 @@ for ds in datasets:
                 targetTitle=f'"{tgt["title"]}"'
             )
 
-        else:  # cold_start (no item titles, still use 3 interest tags)
-            tags = random.sample(interest_tags_pool, 3)
-            prompt = template.format(age=age, gender=gender, pref=", ".join(tags))
+        elif task == "cold_start":
+            need_book_names = "{book_names}" in template
+            need_taste      = "{taste}"       in template
+            need_book_ids   = "{book_ids}"    in template
+            need_uid        = "{user_id}"     in template   
 
-        # Save and update progress
+            if need_book_names:
+                if len(high_list) < n:
+                    continue
+                book_sample     = random.sample(high_list, n)
+                book_names_str  = ", ".join(f'"{t}"' for t, _ in book_sample)
+                book_ids_str    = ", ".join(str(mid) for _, mid in book_sample)
+            else:
+                book_names_str = ""
+                book_ids_str   = ""
+
+            if need_taste:
+                tags = random.sample(interest_tags_pool, 3)
+                taste_str = ", ".join(tags)
+            else:
+                taste_str = ""
+
+            fmt = {
+                "age": age,
+                "gender": gender,
+                "book_names": book_names_str,
+                "book_ids": book_ids_str if need_book_ids else "",
+                "taste": taste_str,
+                "user_id": uid if need_uid else "",
+            }
+            prompt = template.format(**fmt)
+
+        # Store result and update progress bar
         results.append({"text": prompt})
         pbar.update(1)
-
     pbar.close()
     combined_results.extend(results)
 

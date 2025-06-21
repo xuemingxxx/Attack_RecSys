@@ -67,42 +67,87 @@ for ds in datasets:
         # Random n ∈ [3, 11] for the number of titles in the prompt
         n = random.randint(3, 11)
 
-        # ── Fill the template dynamically ─────────────────
         if task == "binary_classification":
-            # 1 target + (n-1) titles; pref ≥ unpref, diff ≤ 1
-            unpref_need = (n - 1) // 2
-            pref_need   = (n - 1) - unpref_need
+            need_pref        = "{pref}"        in template
+            need_unpref      = "{unpref}"      in template
+            need_movie_names = "{movie_names}" in template
+            need_movie_ids   = "{movie_ids}"   in template
+            need_uid         = "{user_id}"     in template
+
+            usable_n = n - 1        # 1 个 target，剩下 usable_n 个历史电影
+
+            if need_pref or need_unpref:                       # pref / unpref 版本
+                unpref_need = usable_n // 2                    # floor
+                pref_need   = usable_n - unpref_need           # ceil
+            else:                                              # 只有 movie_names
+                pref_need   = usable_n
+                unpref_need = 0
+
             if len(high_list) < pref_need or len(low_list) < unpref_need:
                 continue
 
             pref_sample   = random.sample(high_list, pref_need)
-            unpref_sample = random.sample(low_list,  unpref_need)
-            movie_names   = ", ".join(f'"{t}"' for t, _ in pref_sample)
-            movie_ids     = ", ".join(str(mid) for _, mid in pref_sample)
+            unpref_sample = random.sample(low_list,  unpref_need) if unpref_need else []
+            pref_names   = ", ".join(f'"{t}"' for t, _ in pref_sample)
+            pref_ids     = ", ".join(str(mid) for _, mid in pref_sample)
+            unpref_names = ", ".join(f'"{t}"' for t in unpref_sample)
+
+            movie_names_str = pref_names         # 仅喜欢电影的集合
+            movie_ids_str   = pref_ids
 
             candidates = movies_df[~movies_df["movieId"].isin(user_data["movieId"])]
             if candidates.empty:
                 candidates = movies_df
             tgt = candidates.sample(1).iloc[0]
 
-            prompt = template.format(
-                age=age, gender=gender,
-                pref=movie_names,
-                unpref=", ".join(f'"{t}"' for t in unpref_sample),
-                target=f'"{tgt["title"]}"',
-                user_id=uid, movie_names=movie_names,
-                movie_ids=movie_ids,
-                target_title=tgt["title"], target_id=tgt["movieId"]
-            )
+            fmt = {
+                "age": age,
+                "gender": gender,
+                "pref": pref_names,
+                "unpref": unpref_names,
+                "movie_names": movie_names_str,
+                "movie_ids": movie_ids_str if need_movie_ids else "",
+                "user_id": uid if need_uid else "",
+                "target": f'"{tgt["title"]}"',
+                "target_id": tgt["movieId"],
+            }
+            prompt = template.format(**fmt)
 
         elif task == "direct_recommendation":
-            if len(high_list) < n:
+            need_pref        = "{pref}"        in template
+            need_unpref      = "{unpref}"      in template
+            need_movie_names = "{movie_names}" in template
+            need_movie_ids   = "{movie_ids}"   in template
+            need_uid         = "{user_id}"     in template
+
+            if need_pref or need_unpref:                      # pref / unpref 版本
+                unpref_need = n // 2                          # floor(n/2)
+                pref_need   = n - unpref_need                 # 剩下给 pref（奇数时多 1）
+            else:                                             # movie_names 版本
+                pref_need   = n                               # 全部都是喜欢的电影
+                unpref_need = 0
+
+            if len(high_list) < pref_need or len(low_list) < unpref_need:
                 continue
-            pref_sample = random.sample(high_list, n)
-            prompt = template.format(
-                age=age, gender=gender,
-                pref=", ".join(f'"{t}"' for t, _ in pref_sample)
-            )
+
+            pref_sample   = random.sample(high_list, pref_need)
+            unpref_sample = random.sample(low_list,  unpref_need) if unpref_need else []
+            pref_names   = ", ".join(f'"{t}"' for t, _ in pref_sample)
+            pref_ids     = ", ".join(str(mid) for _, mid in pref_sample)
+            unpref_names = ", ".join(f'"{t}"' for t in unpref_sample)
+
+            movie_names_str = pref_names
+            movie_ids_str   = pref_ids
+            fmt = {
+                "age": age,
+                "gender": gender,
+                "pref": pref_names,
+                "unpref": unpref_names,
+                "movie_names": movie_names_str,
+                "movie_ids": movie_ids_str if need_movie_ids else "",
+                "user_id": uid if need_uid else "",
+            }
+            prompt = template.format(**fmt)
 
         elif task == "sequential_recommendation":
             if len(history) < n:
@@ -132,9 +177,37 @@ for ds in datasets:
                 targetTitle=f'"{tgt["title"]}"'
             )
 
-        else:  # cold_start (no item titles, keep 3 interest tags)
-            tags = random.sample(interest_tags_pool, 3)
-            prompt = template.format(age=age, gender=gender, pref=", ".join(tags))
+        elif task == "cold_start":
+            need_movie_names = "{movie_names}" in template
+            need_taste       = "{taste}"       in template
+            need_movie_ids   = "{movie_ids}"   in template
+            need_uid         = "{user_id}"     in template   
+
+            if need_movie_names:
+                if len(high_list) < n:
+                    continue
+                movie_sample     = random.sample(high_list, n)
+                movie_names_str  = ", ".join(f'"{t}"' for t, _ in movie_sample)
+                movie_ids_str    = ", ".join(str(mid) for _, mid in movie_sample)
+            else:
+                movie_names_str = ""
+                movie_ids_str   = ""
+
+            if need_taste:
+                tags = random.sample(interest_tags_pool, 3)
+                taste_str = ", ".join(tags)
+            else:
+                taste_str = ""
+
+            fmt = {
+                "age": age,
+                "gender": gender,
+                "movie_names": movie_names_str,
+                "movie_ids": movie_ids_str if need_movie_ids else "",
+                "taste": taste_str,
+                "user_id": uid if need_uid else "",
+            }
+            prompt = template.format(**fmt)
 
         # Store result and update progress bar
         results.append({"text": prompt})

@@ -136,6 +136,9 @@ The following runtimes were measured on an A40 GPU with 40GB of memory.
 | TallRec | 342,174 seconds (~95 hours)      | 811 seconds                 |
 | CoLLM   | 429,127 seconds (~119 hours)     | 981 seconds                 |
 
+
+### Citation
+Please cite our work as follows.
 ```bibtex
 @inproceedings{Wang2025PrivacyLLMRec,
   author    = {Wang, Yubo and Tang, Min and Shen, Nuo and Cui, Shujie and Wang, Weiqing},

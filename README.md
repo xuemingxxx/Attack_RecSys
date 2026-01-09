@@ -135,3 +135,15 @@ The following runtimes were measured on an A40 GPU with 40GB of memory.
 |---------|----------------------------------|-----------------------------|
 | TallRec | 342,174 seconds (~95 hours)      | 811 seconds                 |
 | CoLLM   | 429,127 seconds (~119 hours)     | 981 seconds                 |
+
+```bibtex
+@inproceedings{Wang2025PrivacyLLMRec,
+  author    = {Wang, Yubo and Tang, Min and Shen, Nuo and Cui, Shujie and Wang, Weiqing},
+  title     = {Privacy Risks of {LLM}-Empowered Recommender Systems: An Inversion Attack Perspective},
+  booktitle = {Proceedings of the Nineteenth ACM Conference on Recommender Systems},
+  pages     = {812--821},
+  year      = {2025},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA}
+}
+```
